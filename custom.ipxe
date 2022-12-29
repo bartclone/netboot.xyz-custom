@@ -1,6 +1,10 @@
 #!ipxe
 ###
 ### netboot.xyz-custom menu - bartclone@users.noreply.github.com
+# 
+#   some good examples:
+#   - https://github.com/RogueScholar/netboot.xyz-custom/blob/b6691f570221f91f5c7c0646d569914e7ccff073/custom.ipxe   
+#   - https://github.com/reaper/netboot.xyz-custom/blob/9f7a3c5df13de0fcef7952e9a9b4a42102f08ce9/custom.ipxe 
 ###
 
 :menu

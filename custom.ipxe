@@ -1,12 +1,19 @@
 #!ipxe
 ###
-### netboot.xyz-custom menu
+### netboot.xyz-custom menu - bartclone@users.noreply.github.com
 ###
 
-:start
-echo Hello world!
-sleep 10
-goto custom_exit
+:menu
+menu Custom iPXE
+item --gap Custom
+item xcp-ng ${space} XCP-ng 8.2.1 ISO
+
+:xcp-ng
+#kernel https://boot.netboot.xyz/memdisk raw iso
+kernel ${memdisk} raw iso
+initrd https://updates.xcp-ng.org/isos/8.2/xcp-ng-8.2.1-netinstall.iso
+boot || goto custom_exit
 
 :custom_exit
-exit 0
+chain utils.ipxe
+exit
